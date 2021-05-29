@@ -1,0 +1,55 @@
+.note__wrapper {
+  display: none;
+  position: fixed;
+  left: 80%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  background: $background-grey;
+  width: 340px;
+  height: 100px;
+  z-index: 14;
+  pointer-events: none;
+  animation: 3s linear 1 favorites-popup;
+  animation-fill-mode: forwards;
+  box-shadow: 0px 6px 8px 0px rgba(34, 60, 80, 0.6);
+
+  & p {
+    @include fonts(500, 24px, $basic-black);
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+.note__wrapper--active {
+  display: block;
+}
+
+@media (max-width: $tablet-width) {
+  .note__wrapper {
+    width: 270px;
+    height: 60px;
+    left: 50%;
+
+    & p {
+      font-size: 16px;
+      padding-top: 0;
+    }
+  }
+}
+
+@keyframes favorites-popup {
+  0% {
+    opacity: 0;
+    transform: translate(-10%, -50%);
+  }
+  8% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

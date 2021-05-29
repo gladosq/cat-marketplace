@@ -1,0 +1,183 @@
+.footer {
+  padding-bottom: 114px;
+}
+
+.footer__wrapper {
+  max-width: 1180px;
+  margin: auto;
+  height: 312px;
+  background: $button-sold-color;
+  display: flex;
+  justify-content: space-between;
+
+  .footer__promo {
+    padding-top: 84px;
+    padding-left: 80px;
+    width: 500px;
+
+    & span:nth-child(1) {
+      @include fonts(700, 48px, $basic-white);
+    }
+
+    & span:nth-child(2) {
+      @include fonts(400, 28px, $basic-white);
+      width: 320px;
+      margin-top: 28px;
+      line-height: 27px;
+      display: inline-block;
+    }
+  }
+
+  .footer__form {
+    width: 718px;
+    margin-top: 90px;
+
+    .footer__input {
+      padding: 22px 94px 27px 34px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      border: none;
+      outline: none;
+
+      &:hover {
+        box-shadow: 0 0 1px 1px $basic-white;
+      }
+
+      &:focus {
+        box-shadow: 0 0 2px 2px $button-color;
+      }
+    }
+
+    .footer__button {
+      @include fonts(700, 14px, $basic-white);
+      font-family: inherit;
+      background: $button-color;
+      padding: 16px 76px 22px;
+      border: 0;
+      border-radius: 10px;
+      margin-right: 78px;
+      margin-left: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: $special-hover;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    & label {
+      @include fonts(400, 14px, $basic-white);
+      margin-left: 38px;
+    }
+
+    .footer__checkbox {
+      display: none;
+
+      & + label {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        height: 30px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 18px;
+          height: 18px;
+          background: $button-color;
+          border-radius: 3px;
+          left: -37px;
+          top: 5px;
+
+          &::hover {
+            opacity: 0.7;
+          }
+        }
+
+        &:hover {
+          color: $special-hover;
+        }
+
+        &:active {
+          opacity: 0.9;
+        }
+      }
+
+      &:checked + label {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          background: url("../img/checkbox.svg");
+          background-repeat: no-repeat;
+          left: -33px;
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $half-desktop-width) {
+  .footer__wrapper {
+    .footer__form {
+      margin-top: 70px;
+      width: 500px;
+
+      .footer__button {
+        padding: 12px 93px 19px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
+
+    .footer__promo {
+      padding-left: 60px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer {
+    padding-bottom: 0;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 40px;
+
+    .footer__promo {
+      padding-top: 20px;
+      padding-left: 0;
+      text-align: center;
+      max-width: 300px;
+
+      & span:nth-child(1) {
+        font-size: 34px;
+      }
+
+      & span:nth-child(2) {
+        font-size: 20px;
+        margin-top: 10px;
+        width: auto;
+      }
+    }
+
+    .footer__form {
+      text-align: center;
+      margin-top: 0;
+      width: 300px;
+
+      .footer__button {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/* Colors */
+$basic-white: #FFFFFF;
+$basic-black: #000000;
+$background-grey: #F3F3F3;
+$button-color: #6EBBD3;
+$button-sold-color: #1F2021;
+$discount-color: #E62D2D;
+$button-decoration: #CACACA;
+$mobile-nav-color: #48494d;
+$special-hover: rgba(255, 150, 105, 0.7);
+
+/* Breakpoints */
+$half-desktop-width: 1220px;
+$tablet-width: 860px;
+$mobile-width: 740px;
+
+/* Fonts */
+@mixin fonts($font-weight: 400, $font-size: 18px, $font-color: $basic-white, $line-height: 28px) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  color: $font-color;
+  line-height: $line-height;
+}
