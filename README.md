@@ -1,4 +1,5 @@
 # Тестовое задание
+Разработка веб-интерфейса
 
 ## Открыть [Demo](https://gladosq.github.io/cat-marketplace/)
 
